@@ -36,7 +36,7 @@ h2 { font-weight: 650; font-size: 9cqw; line-height: 1; }
 .tile.mark::before { position: absolute; content: ''; inset: 11%; background: url(assets/mark.png) center / contain no-repeat; opacity: .88; }
 .tile.recent::after { content: ''; position: absolute; inset: 0; background: #fff6; }
 .tile.origin::after, .tile.suggested::after { position: absolute; content: ''; inset: 0; background: #fff6 url(assets/frame.png) center / 100% 100%; }
-.tile.suggested::after { background: #ffff00; mask: url(assets/frame.png) center / 100% 100%; }
+.tile.suggested::after { background-color: transparent; filter: brightness(0) invert(1) sepia(1) saturate(100); }
 .tile:focus-visible { outline-offset: -4px; }
 .icon { position: absolute; background: transparent center / contain no-repeat; }
 #restart { width: 12%; height: 7%; bottom: 0; left: 0; background-image: url(assets/restart.png); background-size: 65% auto; transform: scaleX(-1); }

@@ -1,9 +1,10 @@
 import { holePuzzle, randomLevel } from './holes.mjs';
 import { puzzle } from './rules.mjs';
+import levels from './levels.json';
 
 const $ = id => document.getElementById(id);
-let levels, number, level, engine, preparedValues;
-let boardWorker;
+let number, level, engine, preparedValues;
+let boardWorker, boardWorkerUrl;
 let turns = [], cursor = 0;
 let phase = 'ready', timer, hint = null;
 
@@ -163,7 +164,8 @@ function startRandom(side) {
   screen('preparing');
   $('preparation').textContent = `${side}×${side} 판의 필승 수를 계산 중입니다…`;
   try {
-    const worker = new Worker(new URL('./prepare-board.js', import.meta.url), {type: 'module'});
+    boardWorkerUrl ??= URL.createObjectURL(new Blob([BOARD_WORKER_SOURCE], {type: 'text/javascript'}));
+    const worker = new Worker(boardWorkerUrl);
     boardWorker = worker;
     worker.onmessage = ({data}) => {
       if (boardWorker === worker) start(null, data.level, data.prepared);
@@ -209,20 +211,10 @@ $('hint').onclick = () => {
 };
 
 screen('home');
-$('play').disabled = true;
-try {
-  const response = await fetch(new URL('./levels.json', import.meta.url));
-  if (!response.ok) throw new Error('레벨 데이터 응답 ' + response.status);
-  levels = await response.json();
-  levels.forEach((_, i) => {
-    const button = document.createElement('button');
-    button.textContent = i + 1;
-    button.setAttribute('aria-label', 'Starter ' + (i + 1));
-    button.onclick = () => start(i);
-    $('levels').append(button);
-  });
-  $('play').disabled = false;
-} catch (error) {
-  $('play').textContent = '레벨을 불러오지 못했습니다';
-  console.error(error);
-}
+levels.forEach((_, i) => {
+  const button = document.createElement('button');
+  button.textContent = i + 1;
+  button.setAttribute('aria-label', 'Starter ' + (i + 1));
+  button.onclick = () => start(i);
+  $('levels').append(button);
+});
