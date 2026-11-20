@@ -1,0 +1,176 @@
+[
+  {
+    "asset": "Level1001",
+    "width": 3,
+    "height": 3,
+    "marked": []
+  },
+  {
+    "asset": "Level1002",
+    "width": 3,
+    "height": 2,
+    "marked": []
+  },
+  {
+    "asset": "Level1003",
+    "width": 3,
+    "height": 3,
+    "marked": [
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  {
+    "asset": "Level1004",
+    "width": 5,
+    "height": 5,
+    "marked": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ]
+  },
+  {
+    "asset": "Level1005",
+    "width": 3,
+    "height": 3,
+    "marked": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ]
+    ]
+  },
+  {
+    "asset": "Level1006",
+    "width": 3,
+    "height": 3,
+    "marked": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ]
+  },
+  {
+    "asset": "Level1007",
+    "width": 3,
+    "height": 3,
+    "marked": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  },
+  {
+    "asset": "Level1008",
+    "width": 3,
+    "height": 3,
+    "marked": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ]
+  },
+  {
+    "asset": "Level1009",
+    "width": 4,
+    "height": 3,
+    "marked": []
+  },
+  {
+    "asset": "Level10010",
+    "width": 5,
+    "height": 5,
+    "marked": []
+  }
+]

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ffffcc">
+  <title>crosswall</title>
+  <link rel="icon" href="web/assets/player.png">
+  <link rel="stylesheet" href="web/style.css">
+</head>
+<body>
+  <main id="game" data-screen="home">
+    <canvas id="backdrop" aria-hidden="true"></canvas>
+    <section id="home" aria-labelledby="logo">
+      <h1 id="logo">crosswall</h1>
+      <button id="play" class="main-button">플레이</button>
+    </section>
+    <section id="selection" aria-labelledby="menu-title" hidden>
+      <header><button class="back" aria-label="뒤로"></button><h2 id="menu-title">crosswall</h2></header>
+      <button id="starter" class="main-button">Starter</button>
+      <button id="challenge" class="main-button">9×9 필승 도전</button>
+      <button id="challenge-large" class="main-button">19×19 필승 도전</button>
+      <label id="large-region-option" hidden>연결 영역
+        <select id="large-region">
+          <option value="0">기본 (최대 16칸)</option>
+          <option value="30">30~32칸</option>
+          <option value="40">40~42칸</option>
+          <option value="50">50~52칸</option>
+          <option value="50x3">50~52칸 × 3 (19×19)</option>
+        </select>
+      </label>
+      <p id="preparation" role="status" hidden></p>
+      <div id="levels" hidden></div>
+    </section>
+    <section id="match" aria-labelledby="level-title" hidden>
+      <header><button class="back" aria-label="메인 화면으로"></button><h2 id="level-title"></h2></header>
+      <p id="status" role="status"></p>
+      <div id="board-view">
+        <div id="board" role="group" aria-label="게임판"></div>
+      </div>
+      <div id="controls">
+        <button id="restart" class="icon" aria-label="다시 시작" title="다시 시작"></button>
+        <button id="prev" class="icon" aria-label="한 수 되돌리기" title="한 수 되돌리기"></button>
+        <button id="next" class="icon" aria-label="한 수 앞으로" title="한 수 앞으로"></button>
+        <button id="zoom" aria-controls="board-view" aria-pressed="false" hidden>판 확대</button>
+        <button id="new-board" hidden>새 랜덤판</button>
+        <button id="hint" class="icon" aria-label="힌트" title="힌트"><span>힌트</span></button>
+      </div>
+      <div id="result" role="dialog" aria-labelledby="win" hidden>
+        <strong id="win" lang="en">WIN</strong>
+        <div><button id="replay" class="icon" aria-label="다시 시작" title="다시 시작"></button>
+        <button id="advance" class="icon" aria-label="다음 레벨" title="다음 레벨"></button></div>
+      </div>
+    </section>
+    <noscript>게임을 실행하려면 자바스크립트를 켜 주세요.</noscript>
+  </main>
+  <script type="module" src="web/app.js"></script>
+</body>
+</html>
