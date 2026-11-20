@@ -6,7 +6,7 @@ button:focus-visible { outline: 3px solid #2f57ae; outline-offset: 3px; z-index:
 button:active:enabled { filter: brightness(.88); }
 [hidden] { display: none !important; }
 #game { width: min(100vw, 56.25vh); width: min(100vw, 56.25dvh); aspect-ratio: 9/16; position: relative; overflow: hidden; isolation: isolate; container-type: inline-size; background: #ffffcc; box-shadow: 0 0 0 1px #31351f1a, 0 6px 55px #31351f16; }
-section, #backdrop { position: absolute; inset: 0; width: 100%; height: 100%; }
+section { position: absolute; inset: 0; width: 100%; height: 100%; }
 h1, h2, p { margin: 0; }
 h1, h2, #starter { letter-spacing: .055em; }
 #logo { position: absolute; width: 100%; top: 29%; transform: translateY(-50%); text-align: center; font-size: 14cqw; font-weight: 640; line-height: 1.1; }

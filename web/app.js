@@ -1,9 +1,7 @@
 import { holePuzzle, randomLevel } from './holes.mjs';
 import { puzzle } from './rules.mjs';
-import { menuBackdrop } from './backdrop.js';
 
 const $ = id => document.getElementById(id);
-const backdrop = menuBackdrop($('backdrop'));
 let levels, number, level, engine, preparedValues;
 let boardWorker;
 let turns = [], cursor = 0;
@@ -22,7 +20,6 @@ function screen(name) {
   $('levels').hidden = name !== 'levels';
   $('match').hidden = name !== 'match';
   $('menu-title').textContent = name === 'levels' ? 'Starter' : 'crosswall';
-  backdrop(name !== 'match');
 }
 
 function start(i, layout = levels[i], prepared) {
