@@ -1,6 +1,6 @@
-# Crosswall 2
+# Crosswall 2 Demo
 
-[게임 바로 플레이하기](https://mingi1178.github.io/crosswall2/)
+[게임 바로 플레이하기](https://mingi1178.github.io/crosswall2-demo/)
 
 원본 Unity WebGL 데모에서 플레이할 수 있는 Starter 10개 레벨을 HTML, CSS, JavaScript로 옮겼습니다. 레벨 데이터와 이미지는 프로젝트에 들어 있어 인터넷 연결 없이 플레이할 수 있습니다.
 
